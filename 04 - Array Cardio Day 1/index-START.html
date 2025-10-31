@@ -81,10 +81,21 @@
     console.log(de);
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    const alphabet = people.sort();
+
+    console.table(alphabet);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
-    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const data = [ 'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+    const sumedUp = data.reduce((result, current) => {
+      if(!result[current]) {
+        result[current] = 0;
+      }
+      result[current]++;
+      return result;
+    }, {})
 
   </script>
 </body>
